@@ -11,6 +11,9 @@ process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true';
 function App() {
   const [count, setCount] = useState(0);
 
+  const url = 'https://assets.afcdn.com/video49/20210722/v_645516.m3u8';
+  //const url = 'https://az.baseballproduct.com/live/MLB13/subchunks.m3u8';
+
   const videoJsOptions = {
     autoplay: false,
     controls: true,
@@ -18,7 +21,7 @@ function App() {
     fluid: true,
     sources: [
       {
-        src: 'http://sample.vodobox.net/skate_phantom_flex_4k/skate_phantom_flex_4k.m3u8',
+        src: url,
         type: 'application/x-mpegURL',
       },
     ],
@@ -43,25 +46,9 @@ function App() {
           />
         </a>
       </div>
-      <h1>Electron + Vite + React</h1>
-      <VideoJS options={videoJsOptions} />
-      {/* <div className='card'>
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+      <div style={{ width: '800px' }}>
+        <VideoJS options={videoJsOptions} />
       </div>
-      <p className='read-the-docs'>
-        Click on the Electron + Vite logo to learn more
-      </p>
-      <div className='flex-center'>
-        Place static files into the<code>/public</code> folder{' '}
-        <img style={{ width: '5em' }} src='./node.svg' alt='Node logo' />
-      </div> */}
-
-      {/* <Update /> */}
     </div>
   );
 }
