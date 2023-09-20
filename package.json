@@ -1,14 +1,13 @@
 {
-  "name": "electron-vite-react",
-  "version": "2.2.0",
+  "name": "desktop-app",
+  "version": "1.0.0",
   "main": "dist-electron/main/index.js",
-  "description": "Electron Vite React boilerplate.",
-  "author": "草鞋没号 <308487730@qq.com>",
+  "description": "",
   "license": "MIT",
   "private": true,
   "debug": {
     "env": {
-      "VITE_DEV_SERVER_URL": "http://127.0.0.1:7777/"
+      "VITE_DEV_SERVER_URL": "http://127.0.0.1:6969/"
     }
   },
   "scripts": {
@@ -19,7 +18,8 @@
     "e2e": "playwright test"
   },
   "dependencies": {
-    "electron-updater": "^6.1.1"
+    "electron-updater": "^6.1.1",
+    "video.js": "^8.5.2"
   },
   "devDependencies": {
     "@playwright/test": "^1.37.1",
